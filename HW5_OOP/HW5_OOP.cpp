@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Time.h"
 #include <Windows.h>
+#include "Schedule.h"
 using namespace std;
 
 int main()
@@ -56,6 +57,20 @@ int main()
 	Time t6(11, 30, 0, false); 
 	cout << "12h формат: ";
 	t6.showTime();
+
+
+	cout << "---------------------------------------------------------\n";
+
+
+	Time start(8, 30, 0); 
+	int lessonDur = 45;    
+	int shortBr = 10;     
+	int longBr = 20;       
+	int longAfter = 2;     
+	int totalLessons = 5; 
+
+	Schedule schedule(start, lessonDur, shortBr, longBr, longAfter, totalLessons);
+	schedule.generateSchedule();
 
 
 	return 0;
