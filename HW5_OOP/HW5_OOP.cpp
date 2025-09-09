@@ -1,9 +1,15 @@
 #include <iostream>
 #include "Time.h"
+#include <Windows.h>
 using namespace std;
 
 int main()
 {
+
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+
+
 	Time t1;
 	Time t2(23, 59, 50, true);
 
